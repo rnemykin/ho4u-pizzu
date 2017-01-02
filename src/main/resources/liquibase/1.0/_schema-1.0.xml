@@ -23,7 +23,7 @@
             <column name="has_delivery" type="BOOLEAN">
                 <constraints nullable="false"/>
             </column>
-            <column name="delivery_price" type="INTEGER"/>
+            <column name="delivery_price" type="NUMERIC"/>
             <column name="delivery_price_from" type="BOOLEAN">
                 <constraints nullable="false"/>
             </column>
