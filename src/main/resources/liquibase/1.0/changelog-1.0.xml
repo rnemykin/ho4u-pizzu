@@ -5,14 +5,12 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
 
-
-    <include file="schema-1.0.xml" relativeToChangelogFile="true"/>
+    <include file="_schema-1.0.xml" relativeToChangelogFile="true"/>
     <changeSet id="30.12.2016-5" author="rnemykin">
         <sqlFile path="dump/cafe.sql" relativeToChangelogFile="true"/>
         <sqlFile path="dump/city.sql" relativeToChangelogFile="true"/>
         <sqlFile path="dump/address.sql" relativeToChangelogFile="true"/>
         <sqlFile path="dump/post.sql" relativeToChangelogFile="true"/>
     </changeSet>
-
 
 </databaseChangeLog>
