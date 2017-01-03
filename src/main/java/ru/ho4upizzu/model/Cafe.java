@@ -5,6 +5,8 @@ import lombok.Data;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -29,4 +31,8 @@ public class Cafe extends Model {
     private Integer rank;
     private String phoneNumbers;
     private String viewLink;
+
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name = "idCafe")
+    List<Address> addresses = new ArrayList<>();
 }
