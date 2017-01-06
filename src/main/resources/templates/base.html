@@ -22,45 +22,29 @@
     </div>
 
     <div class="content">
-        <!--{% block topNav %}-->
-        <!--<div class="nav">-->
-            <!--<ul>-->
-                <!--<li><span class="btn">Пиццерии</span></li>-->
-                <!--<li><a href="/on-the-map">На карте</a></li>-->
-                <!--<li><a href="/articles">Статьи</a></li>-->
-            <!--</ul>-->
+        <th:block layout:fragment="topNavigation">
+            <div class="nav">
+                <ul>
+                    <li><span class="btn">Пиццерии</span></li>
+                    <li><a href="/on-the-map">На карте</a></li>
+                    <li><a href="/articles">Статьи</a></li>
+                </ul>
+                <th:block layout:fragment="filtering">
+                    <div class="filter">
+                        <form name="filterForm" id="filter-form" class="inline-block">
+                            <input type="checkbox" id="with-delivery" name="withDelivery"/>
+                            <span style="margin-right: 15px;">С&nbsp;доставкой</span>
 
-            <!--&lt;!&ndash;{% block filtering %}-->
-            <!--<div class="filter">-->
-                <!--<form name="filterForm" id="filter-form" class="inline-block">-->
-                    <!--<input type="checkbox" id="with-delivery" name="withDelivery"><span style="margin-right: 15px;">С&nbsp;доставкой</span>-->
-                    <!--<input type="checkbox" id="deliver-now" name="deliverNow"><span style="margin-right: 15px;">Доставляют&nbsp;сейчас</span>-->
-                <!--</form>-->
-            <!--</div>-->
-            <!--{% endblock %}&ndash;&gt;-->
-
-        <!--</div>-->
-        <!--{% endblock %}-->
-        <!--<div th:include=":: navigation" th:remove="tag"></div>-->
-
+                            <input type="checkbox" id="deliver-now" name="deliverNow"/>
+                            <span style="margin-right: 15px;">Доставляют&nbsp;сейчас</span>
+                        </form>
+                    </div>
+                </th:block>
+            </div>
+        </th:block>
 
         <div class="content-inner">
-            <!--{% block sorting %}
-            <div id="sort-div">
-                <ul id="sort-options">
-                    {% if sort == "deliveryPrice" %}
-                    <li class="sorted">цена доставки</li>
-                    <li><a href="#" class="sorting" data-sort="name">название</a></li>
-                    {% elif sort == "name" %}
-                    <li><a href="#" class="sorting" data-sort="deliveryPrice">цена доставки</a></li>
-                    <li class="sorted">название</li>
-                    {% endif %}
-                </ul>
-            </div>
-            {% endblock %}-->
-
-            <!--<div th:include=":: sorting" th:remove="tag"></div>-->
-            <!--<div layout:include="this :: content" th:remove="tag"></div>-->
+            <th:block layout:fragment="sorting"></th:block>
 
             <th:block layout:fragment="content">
                 <p>Default alert content</p>

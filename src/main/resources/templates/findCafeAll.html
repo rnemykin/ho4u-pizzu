@@ -1,5 +1,21 @@
 <!DOCTYPE HTML>
 <div layout:include="base :: page" th:remove="tag">
+    <th:block layout:fragment="sorting">
+        <div id="sort-div">
+            <ul id="sort-options">
+                <div th:if="${sort == 'deliveryPrice'}" th:remove="tag">
+                    <li class="sorted">цена доставки</li>
+                    <li><a href="#" class="sorting" data-sort="name">название</a></li>
+                </div>
+
+                <div th:if="${sort == 'name'}" th:remove="tag">
+                    <li><a href="#" class="sorting" data-sort="deliveryPrice">цена доставки</a></li>
+                    <li class="sorted">название</li>
+                </div>
+            </ul>
+        </div>
+    </th:block>
+
     <th:block layout:fragment="content">
         <div th:each="cafe : ${cafes}" itemscope="" itemtype="http://schema.org/LocalBusiness" class="cafe">
             <h3 itemprop="name" class="cafe-title"><a th:text="${cafe.name}" th:href="@{'/cafe/' + ${cafe.viewLink}}"/>
