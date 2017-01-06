@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<div layout:include="base :: page" th:remove="tag">
+    <th:block layout:fragment="content">
+        <div th:each="cafe : ${cafes}" itemscope="" itemtype="http://schema.org/LocalBusiness" class="cafe">
+            <h3 itemprop="name" class="cafe-title"><a th:text="${cafe.name}" th:href="@{'/cafe/' + ${cafe.viewLink}}"/>
+            </h3>
+
+            <div class="cafe-data">
+
+                <div th:if="${cafe.hasDelivery}" th:remove="tag">
+                    <div th:if="${cafe.phoneNumbers}" itemprop="telephone" class="phone inline-block">
+                        <span class="mini">Телефон для заказа:</span><br/>
+                        <span th:text="${cafe.getPhone()}" th:remove="tag"/>
+                    </div>
+
+                    <div th:if="${cafe.deliveryWorkStart}" itemprop="openingHours" datetime="Mo-Su"
+                         class="timetable inline-block">
+                        <span class="mini">Время доставки:</span><br/>
+                        <span th:text="${cafe.getWorkTime()}" th:remove="tag"/>
+                    </div>
+
+                    <div itemprop="price" class="price inline-block">
+                        <span class="mini">Стоимость доставки:</span><br/>
+                        <span th:text="${cafe.getDeliveryPriceDescription()}" th:remove="tag"/>
+                    </div>
+                </div>
+
+
+                <div th:if="${not cafe.hasDelivery}" class="no_delivery inline-block">
+                    Доставки нет. Самовынос.
+                </div>
+
+            </div>
+
+            <div th:if="${cafe.siteUrl}" itemprop="siteUrl" class="web">
+                <a target="_blank" th:href="@{${cafe.siteUrl}}" th:text="${cafe.getSiteUrl()}"></a>
+            </div>
+        </div>
+    </th:block>
+</div>
+

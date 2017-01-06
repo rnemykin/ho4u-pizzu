@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block layout:fragment="page">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="google-site-verification" content="baFPvsLCnwmlgP4kVRXODOR83Eds7zWGIkxr1PZlFCg" />
+    <meta name='yandex-verification' content='5be959f381f584dc' />
+    <meta name="description" content="Доставка пиццы. Заказать пиццу на дом. Пиццерии с доставкой в Белгороде. Заказ и доставка пиццы круглосуточно. Круглосуточная доставка пиццы Белгород. Бесплатная доставка пиццы в Белгороде. Заказать доставку пиццу Белгород."/>
+    <meta name="Keywords" content="заказать пиццу, доставка пиццы, пицца Белгород, заказть пиццу онлайн, пицца круглосуточно Белгород, круглосуточная доставка пиццы, доставка пиццы круглосуточно, пиццерии Белгорода, пиццерия с доставкой, пиццерии круглосуточно"/>
+    <title>Хочу пиццу – заказ и доставка пиццы круглосуточно, пиццерии Белгорода, заказать пиццу с доставкой в Белгороде.</title>
+    <link th:href="@{http://fonts.googleapis.com/css(family=Lobster,subset=cyrillic,cyrillic-ext)}" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1 class="sitetitle">Пиццерии Белгорода. Заказать пиццу с доставкой. Круглосуточная доставка пиццы.</h1>
+<div id="container">
+    <div class="omnomnom">
+        <div class="tasty-image">
+        </div>
+    </div>
+
+    <div class="content">
+        <!--{% block topNav %}-->
+        <!--<div class="nav">-->
+            <!--<ul>-->
+                <!--<li><span class="btn">Пиццерии</span></li>-->
+                <!--<li><a href="/on-the-map">На карте</a></li>-->
+                <!--<li><a href="/articles">Статьи</a></li>-->
+            <!--</ul>-->
+
+            <!--&lt;!&ndash;{% block filtering %}-->
+            <!--<div class="filter">-->
+                <!--<form name="filterForm" id="filter-form" class="inline-block">-->
+                    <!--<input type="checkbox" id="with-delivery" name="withDelivery"><span style="margin-right: 15px;">С&nbsp;доставкой</span>-->
+                    <!--<input type="checkbox" id="deliver-now" name="deliverNow"><span style="margin-right: 15px;">Доставляют&nbsp;сейчас</span>-->
+                <!--</form>-->
+            <!--</div>-->
+            <!--{% endblock %}&ndash;&gt;-->
+
+        <!--</div>-->
+        <!--{% endblock %}-->
+        <!--<div th:include=":: navigation" th:remove="tag"></div>-->
+
+
+        <div class="content-inner">
+            <!--{% block sorting %}
+            <div id="sort-div">
+                <ul id="sort-options">
+                    {% if sort == "deliveryPrice" %}
+                    <li class="sorted">цена доставки</li>
+                    <li><a href="#" class="sorting" data-sort="name">название</a></li>
+                    {% elif sort == "name" %}
+                    <li><a href="#" class="sorting" data-sort="deliveryPrice">цена доставки</a></li>
+                    <li class="sorted">название</li>
+                    {% endif %}
+                </ul>
+            </div>
+            {% endblock %}-->
+
+            <!--<div th:include=":: sorting" th:remove="tag"></div>-->
+            <!--<div layout:include="this :: content" th:remove="tag"></div>-->
+
+            <th:block layout:fragment="content">
+                <p>Default alert content</p>
+            </th:block>
+            <div class="bonappetit">
+                <h2>Заказать пиццу в Белгороде. Доставка пиццы.</h2>
+                <p>Для многих любителей вкусно и быстро поесть одним из самых желаемых блюд является <strong>пицца</strong>. Действительно, каждый десятый проголодавшийся житель <strong>Белгорода</strong>, который не хочет готовить сам, предпочитает <strong>купить</strong> свежую горячую маргариту, неополитану или капричёзу. Но особенно удобно, когда можно <strong>заказать пиццу и её доставку по телефону или онлайн на сайте</strong>. Именно на сайте <a href="http://ho4u-pizzu.ru">&laquo;Хочу пиццу&raquo;</a> вы можете выбрать пиццерии и кафе, которые предлгагают <strong>доставку пиццы</strong>, в зависимости от <a href="http://ho4u-pizzu.ru/open-now/page1">времени суток</a>, или <a href="http://ho4u-pizzu.ru/by-price/page1">суммы</a>, которую вы хотите потратить на свою трапезу.</p>
+                <p>Порадуйте себя – закажите <strong>доставку пиццы</strong>!<br/>
+                    Приятного аппетита. Bon appetit!
+                </p>
+            </div>
+
+        </div>
+
+        <div class="nav bottom yolkee">
+            <a target="_blank" th:href="@{http://yolkee.ru}"><img th:src="@{/css/images/yolkee.png}"/></a>
+        </div>
+    </div>
+</div>
+<div id="go-top"></div>
+
+<!--[if lt IE 9]>
+<script type="text/javascript" th:src="@{http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js}"></script>
+<script type="text/javascript" th:src="@{http://html5shim.googlecode.com/svn/trunk/html5.js}"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" th:src="@{//yandex.st/jquery/1.10.2/jquery.min.js}"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script type="text/javascript" th:src="@{http://yandex.st/jquery/2.0.3/jquery.min.js}"></script>
+<!--<![endif]-->
+<script type="text/javascript" th:src="@{/js/application.js}"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter21684208 = new Ya.Metrika({id:21684208,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img th:src="@{//mc.yandex.ru/watch/21684208}" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</th:block>
+</html>

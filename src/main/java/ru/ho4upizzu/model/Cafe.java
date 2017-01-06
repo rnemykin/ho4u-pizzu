@@ -34,5 +34,5 @@ public class Cafe extends Model {
 
     @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "idCafe")
-    List<Address> addresses = new ArrayList<>();
+    private List<Address> addresses = new ArrayList<>();
 }
