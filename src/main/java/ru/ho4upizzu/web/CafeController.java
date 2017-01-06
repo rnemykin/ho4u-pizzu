@@ -81,7 +81,7 @@ public class CafeController {
     }
 
     private ModelAndView buildView(Iterable<Cafe> cafesWithDelivery, Sort sort) {
-        ModelAndView modelAndView = new ModelAndView("findCafeAll");
+        ModelAndView modelAndView = new ModelAndView("cafeListView");
         modelAndView.addObject("cafes",  StreamSupport.stream(cafesWithDelivery.spliterator(), false).map(CafeDto::new).collect(Collectors.toList()));
         modelAndView.addObject("sort", getOrderProperty(sort));
         return modelAndView;
