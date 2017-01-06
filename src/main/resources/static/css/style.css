@@ -1,0 +1,381 @@
+@font-face {
+    font-family: Appetite;
+    src: url('appetite.otf');
+}
+body {
+    height: 100%;
+	background: url("images/content_background.png") repeat;
+	font-family: Constantia, Cambria, Georgia;
+    font-size: 14pt;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: Appetite, Arial Black;
+	font-weight: 500;
+	margin: 0;
+}
+
+h1.sitetitle {
+    position: absolute;
+    top: -777px;
+}
+ul {
+    margin: 0;
+}
+a {
+    color: #666666;
+    text-decoration: underline;
+}
+a:hover {
+    color: 	#a20000;
+    text-decoration: none;
+}
+
+#pikcha {
+	z-index: -10;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 795px;
+	margin-left: -400px; /* move left by half element's width */
+}
+#pizza_splash {
+		position: absolute;
+		top:100px;
+}
+.omnomnom {
+	position: fixed;
+	float: right;
+	top: 0;
+	left: 70%;
+	width: 30%;
+	height: 100%;
+    background: url('images/pizza_bg2.jpg') center;
+}
+.content {
+	outline: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+.screen-scroll .content {
+    overflow: auto;
+}
+.nav {
+    width: 70%;
+    background-color: #000000;
+}
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.nav a:hover {
+    color: #a20000;
+}
+.nav ul {
+    padding: 15px 0 15px 85px;
+    margin: 0;
+}
+.nav ul li {
+    list-style: none;
+    display: inline;
+    margin-right: 15px;
+    line-height: 36px;
+}
+.filter {
+    font-size: 85%;
+    padding: 0 0 15px 85px;
+    color: #b2b2b2;
+}
+.flat-button {
+    background: #666666;
+    color: #ffffff;
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+}
+.flat-button:hover {
+    background: #777777;
+}
+/*Сортиврока*/
+#sort-div {
+    position: relative;
+    z-index: 2;
+    float: right;
+    padding: 0 0 5px 36px;
+    background: url("images/sort_by.png") no-repeat;
+}
+#sort-div ul {
+    margin: 0;
+    padding: 0;
+}
+#sort-div ul li {
+    list-style: none;
+    display: inline;
+    padding-bottom: 10px;
+    margin-right: 20px;
+}
+a.sort {
+    text-decoration: none;
+    border-bottom: 1px dotted #8b0400;
+    /*cursor: pointer !important;*/
+}
+.content-inner {
+	width: 70%;
+	padding: 30px 85px;
+    margin-bottom: 38px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.cafe {
+	position: relative;
+	padding: 40px 0;
+    border-bottom: #808080 1px dashed;
+}
+.cafe-title {
+	font-size: 200%;
+	line-height: 1.4;
+	color: #a20000;
+	/*text-shadow: 0 1px 0 #000;*/
+    /*border-bottom: 1px solid;*/
+}
+.cafe-title a{
+    color: #a20000;
+}
+.cafe-meta {
+	padding-bottom: 10px;
+	font-size: 90%;
+	line-height: 1.2;
+}
+.address {
+    background: url("images/icon_pointer.png") left top no-repeat;
+    margin-top: 5px;
+    padding-left: 20px;
+    color: #808080;
+}
+.collapse {
+    border-bottom: 1px dashed #808080;
+    cursor: pointer;
+}
+div.sub-address {
+    display: none;
+}
+.sub-address ul {
+    padding: 0;
+    margin: 0;
+}
+.sub-address ul li {
+    list-style: none;
+    margin-left: 0;
+}
+.cafe-data {
+    padding-bottom: 10px;
+    font-size: 125%;
+    line-height: 1.2;
+}
+.cafe-data div {
+    padding-left: 24px;
+    margin: 10px 15px 0 0;
+    line-height: 21pt;
+}
+.cafe-fulldata h4{
+    margin: 30px 0 0 0;
+}
+.inline-block {
+    display: inline-block;
+}
+.mini {
+    font-size: 70%;
+    color: #a20000;
+}
+.phone {
+    background: url("images/icon_phone.png") left top no-repeat;
+}
+.timetable {
+    background: url("images/icon_clock.png") left top no-repeat;
+}
+.price {
+    background: url("images/icon_coins.png") left top no-repeat;
+}
+.web {
+    /*background: url("images/icon_globe.png") left top no-repeat;*/
+    padding-left: 0 !important;
+    margin-top: 16px;
+    font-size: 90%;
+}
+.web a {
+    color: #000;
+}
+.cafe .web a {
+    color: #666666;
+    font-size: 110%;
+}
+.more-info {
+    margin-top: 10px;
+}
+.btn {
+    display: inline-block;
+    background: #a20000;
+    font-weight: bold;
+    height: 36px;
+    line-height: 36px;
+    color: #fff !important;
+    padding: 0 15px;
+    border: 0;
+    border-radius: 3px;
+}
+.bottom {
+    position: absolute;
+    bottom: 0;
+    /*margin-top: 40px;*/
+}
+.yolkee{
+    text-align: center;
+    padding: 20px 0;
+}
+#go-top {
+    width: 38px;
+    height: 47px;
+    position: fixed;
+    bottom: 70px;
+    left: 10px;
+    display: none;
+    background: url("images/pizza_up.png") no-repeat;
+    cursor: pointer;
+}
+.bonappetit {
+    /*color: #fff;*/
+    font-size: 75%;
+    margin: 25px 0;
+}
+.bonappetit p strong {
+    font-weight: normal;
+}
+.no-pizza {
+    float: left;
+    margin: 50px 0 0 25px;
+}
+.pizza-box{
+    width: 100%;
+    height: 275px;
+}
+.text404 {
+    margin: 80px 20px 0 340px;
+}
+#error500 {
+    margin: 250px auto;
+    width: 320px;
+    text-align: center;
+}
+.red {
+    color: #a20000;
+}
+.article {
+    padding: 30px 0;
+    border-bottom: #808080 1px dashed;
+}
+.short-description {
+    margin: 15px 0;
+}
+@media screen and (max-width: 770px) {
+
+    .container {
+        min-width: 300px;
+        font-size: 200%;
+    }
+    .omnomnom {
+        float: none;
+        width: 100%;
+        height: 200px;
+        max-width: none;
+        position: relative !important;
+        left: 0;
+        top: 0;
+        z-index:0;
+    }
+    .tasty-image {
+        background-position: center center;
+        background-size: cover;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .content {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .nav {
+        position: relative;
+        width: 100%;
+    }
+    .nav ul {
+        padding: 20px;
+    }
+    .filter {
+        padding: 0 0 20px 20px;
+    }
+    #sort-div {
+        right: 20px;
+    }
+    .content-inner {
+        padding: 20px;
+        width: 100%;
+    }
+    .data-block {
+        margin: 15px 15px 0 0;
+    }
+    .phone {
+        float: none;
+        position: relative !important;
+        width: auto;
+    }
+    .timetable {
+        position: relative;
+        width: auto;
+        }
+    #go-top {
+        right: 10px;
+        bottom: 80px;
+        left: auto;
+    }
+    .no-pizza {
+        display: none;
+    }
+    .text404 {
+        margin:20px;
+    }
+}
+
+input.error, textarea.error {
+    border: #8b0400 solid 1px;
+}
+
+.no_delivery {
+     background: url("images/no_delivery.png") left top no-repeat;
+}
+
+#map-cafe{
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+}
+
+#map{
+    width: 100%;
+    height: 500px;
+    margin: 30px 0 30px 0;
+}
