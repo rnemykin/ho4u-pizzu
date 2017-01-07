@@ -55,10 +55,10 @@ public class CafeDto {
     }
 
     public String getDeliveryPriceDescription() {
-        if (deliveryPriceFrom != null)
+        if (Boolean.TRUE.equals(deliveryPriceFrom))
             return "Бесплатная при заказе от " + deliveryPrice + " руб.";
 
-        if (minimalOrderPrice != null)
+        if (Boolean.TRUE.equals(minimalOrderPrice))
             return "Бесплатная. Минимальный заказ от " + deliveryPrice + " руб.";
 
         if (BigDecimal.ZERO.compareTo(deliveryPrice) == 0)

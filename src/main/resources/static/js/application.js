@@ -1,6 +1,13 @@
 "use strict";
 
 jQuery(document).ready(function () {
+    if(window.location.href.match('deliver-now')) {
+        $('#deliver-now').prop('checked', true);
+        $('#with-delivery').prop('checked', true);
+    } else if(window.location.href.match('with-delivery')) {
+        $('#with-delivery').prop('checked', true);
+    }
+
     $(".collapse").click(function () {
         var div = $(this).parents(".address");
         var subAddress = div.children(".sub-address");
