@@ -54,6 +54,71 @@ public class CafeDto {
         this.addresses = cafe.getAddresses();
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Boolean getHasDelivery() {
+        return hasDelivery;
+    }
+
+    public BigDecimal getDeliveryPrice() {
+        return deliveryPrice;
+    }
+
+    public Boolean getDeliveryPriceFrom() {
+        return deliveryPriceFrom;
+    }
+
+    public Boolean getMinimalOrderPrice() {
+        return minimalOrderPrice;
+    }
+
+    public Integer getDeliveryTime() {
+        return deliveryTime;
+    }
+
+    public LocalTime getDeliveryWorkStart() {
+        return deliveryWorkStart;
+    }
+
+    public LocalTime getDeliveryWorkEnd() {
+        return deliveryWorkEnd;
+    }
+
+    public LocalTime getWorkStart() {
+        return workStart;
+    }
+
+    public LocalTime getWorkEnd() {
+        return workEnd;
+    }
+
+    public Integer getRank() {
+        return rank;
+    }
+
+    public String getPhoneNumbers() {
+        return phoneNumbers;
+    }
+
+    public String getViewLink() {
+        return viewLink;
+    }
+
+    public List<Address> getAddresses() {
+        return addresses;
+    }
+
     public String getDeliveryPriceDescription() {
         if (Boolean.TRUE.equals(deliveryPriceFrom))
             return "Бесплатная при заказе от " + deliveryPrice + " руб.";

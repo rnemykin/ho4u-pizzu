@@ -66,6 +66,15 @@ public class CafeController {
         return modelAndView;
     }
 
+    @RequestMapping("/on-the-map")
+    public ModelAndView onTheMap() {
+        Iterable<Cafe> cafes = cafeRepository.findAll();
+
+        ModelAndView modelAndView = new ModelAndView("map");
+        modelAndView.addObject("cafes",  StreamSupport.stream(cafes.spliterator(), false).map(CafeDto::new).collect(Collectors.toList()));
+        return modelAndView;
+    }
+
     private Sort getSortOrMakeDefault(Sort sort) {
         if(sort == null) {
             return NAME_ASC_SORT;
