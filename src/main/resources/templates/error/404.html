@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<div layout:include="base :: page" th:remove="tag">
+    <th:block layout:fragment="topNavigation"></th:block>
+    <th:block layout:fragment="sorting"></th:block>
+
+    <th:block layout:fragment="content">
+        <div class="no-pizza">
+            <img class="pizza-box" th:src="@{/css/images/no_pizza_404_320.png}" width="320"/>
+        </div>
+        <div class="text404">
+            <h3 class="cafe-title">Здесь пиццы нет</h3>
+
+            <p>Страница не найдена (ошибка 404)</p>
+
+            <p>Ошибка 404 возникает, если запрошенная страница удалена или набран неправильный адрес.<br/>Попробуйте
+                начать с
+                <a href="/">Главной</a>
+            </p>
+        </div>
+        <br/><br/><br/><br/><br/>
+
+        </th:block>
+
+    <th:block layout:fragment="script"></th:block>
+</div>

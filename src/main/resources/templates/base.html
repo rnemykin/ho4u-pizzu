@@ -49,6 +49,7 @@
             <th:block layout:fragment="content">
                 <p>Default alert content</p>
             </th:block>
+
             <div class="bonappetit">
                 <h2>Заказать пиццу в Белгороде. Доставка пиццы.</h2>
                 <p>Для многих любителей вкусно и быстро поесть одним из самых желаемых блюд является <strong>пицца</strong>. Действительно, каждый десятый проголодавшийся житель <strong>Белгорода</strong>, который не хочет готовить сам, предпочитает <strong>купить</strong> свежую горячую маргариту, неополитану или капричёзу. Но особенно удобно, когда можно <strong>заказать пиццу и её доставку по телефону или онлайн на сайте</strong>. Именно на сайте <a href="http://ho4u-pizzu.ru">&laquo;Хочу пиццу&raquo;</a> вы можете выбрать пиццерии и кафе, которые предлгагают <strong>доставку пиццы</strong>, в зависимости от <a href="http://ho4u-pizzu.ru/open-now/page1">времени суток</a>, или <a href="http://ho4u-pizzu.ru/by-price/page1">суммы</a>, которую вы хотите потратить на свою трапезу.</p>
@@ -66,6 +67,7 @@
 </div>
 <div id="go-top"></div>
 
+<th:block layout:fragment="script">
 <!--[if lt IE 9]>
 <script type="text/javascript" th:src="@{http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js}"></script>
 <script type="text/javascript" th:src="@{http://html5shim.googlecode.com/svn/trunk/html5.js}"></script>
@@ -78,7 +80,7 @@
 <!--<![endif]-->
 <script type="text/javascript" th:src="@{/js/application.js}"></script>
 
-<th:block layout:fragment="script-content"></th:block>
+<th:block layout:fragment="script-adds"></th:block>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -107,6 +109,7 @@
 </script>
 <noscript><div><img th:src="@{//mc.yandex.ru/watch/21684208}" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+</th:block>
 </body>
 </th:block>
 </html>

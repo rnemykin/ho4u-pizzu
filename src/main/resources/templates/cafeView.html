@@ -47,7 +47,7 @@
         </div>
     </th:block>
 
-    <th:block layout:fragment="script-content">
+    <th:block layout:fragment="script-adds">
         <script th:src="@{http://api-maps.yandex.ru/2.0-stable(load=package.standard,lang=ru-RU)}" type="text/javascript"></script>
         <script th:inline="javascript">
             function addMarker(map, longitude, latitude, content, hint) {

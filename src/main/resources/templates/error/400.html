@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<div layout:include="base :: page" th:remove="tag">
+    <th:block layout:fragment="topNavigation"></th:block>
+    <th:block layout:fragment="sorting"></th:block>
+
+    <th:block layout:fragment="content">
+        <div id="error500">
+            <h3 class="cafe-title">че то не то с параметрами</h3>
+        </div>
+    </th:block>
+    <br/><br/><br/><br/><br/>
+    <th:block layout:fragment="script"></th:block>
+</div>
