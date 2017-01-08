@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<div layout:include="base :: page" th:remove="tag">
+    <th:block layout:fragment="topNavigation">
+        <div class="nav">
+            <ul>
+                <li><a href="/">Пиццерии</a></li>
+                <li><a href="/on-the-map">На карте</a></li>
+                <li><span class="btn">Статьи</span></li>
+            </ul>
+        </div>
+
+        <th:block layout:fragment="filtering"></th:block>
+    </th:block>
+
+    <th:block layout:fragment="sorting"></th:block>
+
+    <th:block layout:fragment="content">
+        <div class="article" th:each="post : ${posts}">
+            <div class="publish-date mini" th:text="${#temporals.format(post.publishDate, 'dd.MM.yyyy HH:mm')}"></div>
+            <h3 th:text="${post.title}"></h3>
+
+            <div class="short-description" th:utext="${post.shortDescription}"></div>
+            <!--<div class="author mini">Кристина Маринара</div>-->
+            <a th:href="@{'/posts/' + ${post.id}}" class="read-more">Читать далее</a>
+        </div>
+    </th:block>
+</div>
