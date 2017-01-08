@@ -92,7 +92,7 @@ public class CafeDto {
                 deliveryWorkStart.format(TIME_FORMATTER), deliveryWorkEnd.format(TIME_FORMATTER));
     }
 
-    public List<String> getAddresses() {
+    public List<String> getAddressesAsStrings() {
         return addresses.stream().map(a -> {
             StringBuilder sb = new StringBuilder();
             if(a.getCity().contains("пос.")) {

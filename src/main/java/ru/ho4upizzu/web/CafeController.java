@@ -61,7 +61,7 @@ public class CafeController {
             throw new ObjectNotFoundException("cafe.vieLink = " + viewLink);
         }
 
-        ModelAndView modelAndView = new ModelAndView("cafeByViewLink");
+        ModelAndView modelAndView = new ModelAndView("cafeView");
         modelAndView.addObject("cafe", new CafeDto(cafe));
         return modelAndView;
     }

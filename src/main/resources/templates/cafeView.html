@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<div layout:include="base :: page" th:remove="tag">
+    <th:block layout:fragment="topNavigation">
+        <div class="nav">
+            <ul>
+                <li><a href="/">Пиццерии</a></li>
+                <li><a href="/on-the-map">На карте</a></li>
+                <li><a href="/articles">Статьи</a></li>
+            </ul>
+            <th:block layout:fragment="filtering"></th:block>
+        </div>
+    </th:block>
+    <th:block layout:fragment="sorting"></th:block>
+
+    <th:block layout:fragment="content">
+        <div itemscope="" itemtype="http://schema.org/LocalBusiness" class="cafe">
+            <h3 itemprop="name" class="cafe-title" th:text="${cafe.name}"></h3>
+            <a target="_blank" th:href="@{${cafe.siteUrl}}" th:text="${cafe.getSiteUrl()}"></a>
+
+            <div class="cafe-fulldata">
+
+                <div th:if="${cafe.phoneNumbers}" th:remove="tag">
+                    <h4 itemprop="telephone">Телефон для заказа:</h4>
+                    <div th:text="${cafe.getPhone()}" th:remove="tag"/>
+                </div>
+
+                <div th:if="${cafe.hasDelivery}" th:remove="tag">
+                    <div th:if="${cafe.deliveryWorkStart}" th:remove="tag">
+                        <h4 itemprop="deliveryTime" datetime="Mo-Su">Время доставки:</h4>
+                        <div th:text="${cafe.getWorkTime()}" th:remove="tag"/>
+                    </div>
+
+                    <h4 itemprop="price">Стоимость доставки:</h4>
+                    <div th:text="${cafe.getDeliveryPriceDescription()}" th:remove="tag"/>
+                </div>
+
+                <h4 itemprop="about">О заведении:</h4>
+                <div th:text="${cafe.description}" th:remove="tag"/>
+
+                <h4 itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">Адрес:</h4>
+                <ul th:each="address : ${cafe.getAddressesAsStrings()}">
+                    <li itemprop="streetAddress" th:text="${address}"></li>
+                </ul>
+            </div>
+
+            <div id="map-cafe"></div>
+        </div>
+    </th:block>
+
+    <th:block layout:fragment="script-content">
+        <script th:src="@{http://api-maps.yandex.ru/2.0-stable(load=package.standard,lang=ru-RU)}" type="text/javascript"></script>
+        <script th:inline="javascript">
+            function addMarker(map, longitude, latitude, content, hint) {
+                var myPlacemark = new ymaps.Placemark(
+                        [longitude, latitude],
+                        {
+                            balloonContent: content || '',
+                            hintContent: hint || ''
+                        },
+                        {
+                            draggable: false,
+                            iconImageHref: '../static/css/images/pizza_map_pointer.png',
+                            iconImageSize: [32, 32]
+                        }
+                );
+                map.geoObjects.add(myPlacemark);
+                return map;
+            }
+
+            ymaps.ready(init);
+            var myMap;
+
+            function init () {
+                var centerCoords ;
+                if([[${cafe.addresses.size()}]] == 1){
+                    centerCoords = [ [[ ${cafe.addresses[0].latitude} ]], [[ ${cafe.addresses[0].longitude} ]] ];
+                } else{
+                    centerCoords = [50.584549, 36.57367 ];
+                }
+                console.log(centerCoords);
+                myMap = new ymaps.Map('map-cafe', {
+                    center: centerCoords,
+                    zoom: 10,
+                    behaviors: ["scrollZoom", 'drag']
+                });
+
+                myMap.controls.add('zoomControl');
+
+                /*<![CDATA[*/
+                var cafeAddresses = [[${cafe.addresses}]];
+                for(var i = 0; i < cafeAddresses.length; i++) {
+                    addMarker(myMap, cafeAddresses[i].latitude, cafeAddresses[i].longitude);
+                }
+                /*]]>*/
+
+            }
+        </script>
+    </th:block>
+</div>
+
