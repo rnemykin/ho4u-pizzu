@@ -11,7 +11,7 @@ INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALU
 INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (11, 'Белгород', 'Николая Чумичова', '66', 3, '50.605242', '36.596188');
 INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (12, 'Белгород', 'Костюкова', '67а', 3, '50.577519', '36.591822');
 INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (13, 'Белгород', 'Народный бр.', '82в', 3, '50.600966', '36.586612');
-INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (14, 'Белгород', 'Широкая', '1б', 3, '50.587294', '36.614298');
+INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (14, 'Белгород, Дубовое', 'Широкая', '1б', 3, '50.535164', '36.573356');
 INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (17, 'Белгород', 'Победы', '71', 6, '50.592161', '36.591768');
 INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (22, 'Белгород', 'Гражданский просп.', '2', 10, '50.593384', '36.603231');
 INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (23, 'Белгород', 'просп. Богдана Хмельницкого', '160', 10, '50.63869', '36.571754');
@@ -44,3 +44,6 @@ INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALU
 INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (77, 'Белгород', 'просп. Богдана Хмельницкого', '135д', 52, '36.567729', '50.627715');
 INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (78, 'Белгород', 'Попова', '30', 53, '50.598936', '36.58972');
 INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (79, 'Белгород', 'Щорса', '64', 54, '50.552504', '36.569005');
+INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (80, 'Белгород', 'Шаландина', '1а', 48, '50.572004', '36.575651');
+INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (81, 'Белгород', 'просп. Богдана Хмельницкого', '104Б', 3, '50.620384', '36.577654');
+INSERT INTO address (id, city, street, house, id_cafe, latitude, longitude) VALUES (82, 'Белгород', 'Дегтярева', '2Б', 55, '50.584009', '36.568562');
