@@ -1,5 +1,6 @@
 package ru.ho4upizzu.web.model;
 
+import lombok.Getter;
 import org.springframework.util.StringUtils;
 import ru.ho4upizzu.model.Address;
 import ru.ho4upizzu.model.Cafe;
@@ -12,27 +13,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Getter
 public class CafeDto {
     private static final String NO_INFO = "Нет информации";
-    public static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
+    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
 
-    public String name;
-    public String type;
-    public String description;
-    public Boolean hasDelivery;
-    public BigDecimal deliveryPrice;
-    public Boolean deliveryPriceFrom;
-    public Boolean minimalOrderPrice;
-    public Integer deliveryTime;
-    public LocalTime deliveryWorkStart;
-    public LocalTime deliveryWorkEnd;
-    public LocalTime workStart;
-    public LocalTime workEnd;
-    public String siteUrl;
-    public Integer rank;
-    public String phoneNumbers;
-    public String viewLink;
-    public List<Address> addresses = new ArrayList<>();
+    private String name;
+    private String type;
+    private String description;
+    private Boolean hasDelivery;
+    private BigDecimal deliveryPrice;
+    private Boolean deliveryPriceFrom;
+    private Boolean minimalOrderPrice;
+    private Integer deliveryTime;
+    private LocalTime deliveryWorkStart;
+    private LocalTime deliveryWorkEnd;
+    private LocalTime workStart;
+    private LocalTime workEnd;
+    private String siteUrl;
+    private Integer rank;
+    private String phoneNumbers;
+    private String viewLink;
+    private List<Address> addresses = new ArrayList<>();
 
     public CafeDto(Cafe cafe) {
         this.name = cafe.getName();
@@ -54,80 +56,18 @@ public class CafeDto {
         this.addresses = cafe.getAddresses();
     }
 
-
-    public String getName() {
-        return name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public Boolean getHasDelivery() {
-        return hasDelivery;
-    }
-
-    public BigDecimal getDeliveryPrice() {
-        return deliveryPrice;
-    }
-
-    public Boolean getDeliveryPriceFrom() {
-        return deliveryPriceFrom;
-    }
-
-    public Boolean getMinimalOrderPrice() {
-        return minimalOrderPrice;
-    }
-
-    public Integer getDeliveryTime() {
-        return deliveryTime;
-    }
-
-    public LocalTime getDeliveryWorkStart() {
-        return deliveryWorkStart;
-    }
-
-    public LocalTime getDeliveryWorkEnd() {
-        return deliveryWorkEnd;
-    }
-
-    public LocalTime getWorkStart() {
-        return workStart;
-    }
-
-    public LocalTime getWorkEnd() {
-        return workEnd;
-    }
-
-    public Integer getRank() {
-        return rank;
-    }
-
-    public String getPhoneNumbers() {
-        return phoneNumbers;
-    }
-
-    public String getViewLink() {
-        return viewLink;
-    }
-
-    public List<Address> getAddresses() {
-        return addresses;
-    }
-
     public String getDeliveryPriceDescription() {
-        if (Boolean.TRUE.equals(deliveryPriceFrom))
+        if (Boolean.TRUE.equals(deliveryPriceFrom)) {
             return "Бесплатная при заказе от " + deliveryPrice + " руб.";
+        }
 
-        if (Boolean.TRUE.equals(minimalOrderPrice))
+        if (Boolean.TRUE.equals(minimalOrderPrice)) {
             return "Бесплатная. Минимальный заказ от " + deliveryPrice + " руб.";
+        }
 
-        if (BigDecimal.ZERO.compareTo(deliveryPrice) == 0)
+        if (BigDecimal.ZERO.compareTo(deliveryPrice) == 0) {
             return "Бесплатная";
+        }
 
         return deliveryPrice + " руб.";
     }
@@ -137,7 +77,7 @@ public class CafeDto {
     }
 
     public String getSiteUrl() {
-        if(StringUtils.endsWithIgnoreCase(siteUrl, "/")) {
+        if (StringUtils.endsWithIgnoreCase(siteUrl, "/")) {
             return siteUrl.replaceFirst(".$", "");
         }
 
@@ -145,11 +85,11 @@ public class CafeDto {
     }
 
     public String getWorkTime() {
-        if(deliveryWorkStart == null || deliveryWorkEnd == null) {
+        if (deliveryWorkStart == null || deliveryWorkEnd == null) {
             return NO_INFO;
         }
 
-        if(deliveryWorkStart.equals(deliveryWorkEnd)) {
+        if (deliveryWorkStart.equals(deliveryWorkEnd)) {
             return "Круглосуточно";
         }
 
@@ -160,13 +100,13 @@ public class CafeDto {
     public List<String> getAddressesAsStrings() {
         return addresses.stream().map(a -> {
             StringBuilder sb = new StringBuilder();
-            if(a.getCity().contains("пос.")) {
+            if (a.getCity().contains("пос.")) {
                 sb.append("{0}");
             } else {
                 sb.append("г. {0}");
             }
 
-            if(a.getStreet().matches("просп\\.|пер\\.|бр\\.")) {
+            if (a.getStreet().matches("просп\\.|пер\\.|бр\\.")) {
                 sb.append(", {1}, {2}");
             } else {
                 sb.append(", ул. {1}, {2}");
@@ -174,8 +114,5 @@ public class CafeDto {
             return MessageFormat.format(sb.toString(), a.getCity(), a.getStreet(), a.getHouse());
         }).collect(Collectors.toList());
     }
-
-
-
 
 }
