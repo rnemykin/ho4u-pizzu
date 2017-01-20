@@ -29,6 +29,7 @@
 			<id>dev</id>
 			<properties>
 				<project.packaging.type>jar</project.packaging.type>
+				<project.profile>dev</project.profile>
 			</properties>
 			<dependencies>
 				<dependency>
@@ -49,7 +50,8 @@
 			</activation>
 			<properties>
 				<project.packaging.type>war</project.packaging.type>
-			</properties>
+                <project.profile>prod</project.profile>
+            </properties>
 			<dependencies>
 				<dependency>
 					<groupId>org.springframework.boot</groupId>
@@ -133,6 +135,12 @@
 				</configuration>
 			</plugin>
 		</plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
 	</build>
 
 </project>
