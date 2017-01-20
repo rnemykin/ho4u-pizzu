@@ -6,7 +6,7 @@
 	<groupId>ru.ho4upizzu</groupId>
 	<artifactId>ho4upizzu</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>${project.packaging.type}</packaging>
 
 	<name>ho4u-pizzu</name>
 	<description>Ho4u pizzy project</description>
@@ -27,6 +27,9 @@
 	<profiles>
 		<profile>
 			<id>dev</id>
+			<properties>
+				<project.packaging.type>jar</project.packaging.type>
+			</properties>
 			<dependencies>
 				<dependency>
 					<groupId>org.springframework.boot</groupId>
@@ -44,6 +47,9 @@
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
+			<properties>
+				<project.packaging.type>war</project.packaging.type>
+			</properties>
 			<dependencies>
 				<dependency>
 					<groupId>org.springframework.boot</groupId>
