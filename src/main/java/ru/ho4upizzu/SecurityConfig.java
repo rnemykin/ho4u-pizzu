@@ -1,21 +1,26 @@
 package ru.ho4upizzu;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import ru.ho4upizzu.security.UserAccount;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    @Autowired
+    private UserAccount userAccount;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
-                .passwordEncoder(new BCryptPasswordEncoder())
-                .withUser("pizza_lover")
-                .password("$2a$10$SZyRZ.ASrwG5SqSJA8t4kO7tpxaTb8tOSJe7D1aMNoOp/ckRULgwC")
+                .passwordEncoder(new BCryptPasswordEncoder(12))
+                .withUser(userAccount.name)
+                .password(userAccount.password)
                 .roles("ADMIN");
     }
 
@@ -32,7 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .hasRole("ADMIN")
                 .and()
                     .formLogin()
-                    .successForwardUrl("/admin-page")
+                    .defaultSuccessUrl("/admin")
                 .and()
                     .authorizeRequests()
                     .anyRequest()
