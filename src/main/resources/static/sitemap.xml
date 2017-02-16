@@ -1,33 +1,95 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-<url>
-  <loc>http://ho4u-pizzu.ru/</loc>
-</url>
-<url>
-  <loc>http://ho4u-pizzu.ru/open-now/page1</loc>
-</url>
-<url>
-  <loc>http://ho4u-pizzu.ru/by-price/page1</loc>
-</url>
-<url>
-  <loc>http://ho4u-pizzu.ru/page2</loc>
-</url>
-<url>
-  <loc>http://ho4u-pizzu.ru/page3</loc>
-</url>
-<url>
-  <loc>http://ho4u-pizzu.ru/by-price/page2</loc>
-</url>
-<url>
-  <loc>http://ho4u-pizzu.ru/by-price/page3</loc>
-</url>
-<url>
-  <loc>http://ho4u-pizzu.ru/page1</loc>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>http://ho4u-pizzu.ru/</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/on-the-map</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/posts</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/480-let-do-nashej-jery</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/cinema-pizza</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/forno-a-legna</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/koodoo</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/la-terrazza</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/ambar31</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/bellagio</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/budu-budu</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/vesyolyj-povar</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/dodopizza</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/zharpizza</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/lajm</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/malenkaya-italiya</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/master-pizza</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/nyam-nyam</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/pizza-and-sushi-express</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/pizzemania</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/potapych-pizza</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/rits</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/soprano</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/tashirpizza</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/trattoriya</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/cafe/fabrika-pitstsy</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/posts/6</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/posts/4</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/posts/3</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/posts/2</loc>
+  </url>
+  <url>
+    <loc>http://ho4u-pizzu.ru/posts/1</loc>
+  </url>
 </urlset>
