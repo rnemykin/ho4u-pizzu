@@ -45,7 +45,7 @@
 			<id>open-shift</id>
 			<properties>
 				<project.packaging.type>war</project.packaging.type>
-                <project.profile>prod</project.profile>
+                <project.profile>open-shift</project.profile>
             </properties>
 			<dependencies>
 				<dependency>
