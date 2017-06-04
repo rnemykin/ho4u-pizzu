@@ -5,14 +5,14 @@
 body {
     height: 100%;
 	background: url("images/content_background.png") repeat;
-	font-family: Constantia, Cambria, Georgia;
+    font-family: Constantia, Cambria, Georgia, serif;
     font-size: 14pt;
     margin: 0;
     padding: 0;
 }
 
 h1, h2, h3, h4 {
-    font-family: Appetite, Arial Black;
+    font-family: Appetite, Arial Black, serif;
 	font-weight: 500;
 	margin: 0;
 }
@@ -25,7 +25,7 @@ ul {
     margin: 0;
 }
 a {
-    color: #666666;
+    color: #666;
     text-decoration: underline;
 }
 a:hover {
@@ -42,17 +42,18 @@ a:hover {
 	margin-left: -400px; /* move left by half element's width */
 }
 #pizza_splash {
-		position: absolute;
-		top:100px;
+    position: absolute;
+    top:100px;
 }
 .omnomnom {
-	position: fixed;
-	float: right;
-	top: 0;
-	left: 70%;
-	width: 30%;
-	height: 100%;
-    background: url('images/pizza_bg2.jpg') center;
+    position: fixed;
+    float: right;
+    top: 0;
+    left: 70%;
+    width: 30%;
+    height: 100%;
+    background: url('images/pizza_bg2.jpg') no-repeat center;
+    background-size: cover;
 }
 .content {
 	outline: 0;
@@ -70,11 +71,11 @@ a:hover {
 }
 .nav {
     width: 70%;
-    background-color: #000000;
+    background-color: #000;
 }
 .nav a {
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
 }
 .nav a:hover {
     color: #a20000;
@@ -95,8 +96,8 @@ a:hover {
     color: #b2b2b2;
 }
 .flat-button {
-    background: #666666;
-    color: #ffffff;
+    background: #666;
+    color: #fff;
     border: 0;
     border-radius: 3px;
     padding: 5px;
@@ -216,7 +217,7 @@ div.sub-address {
     color: #000;
 }
 .cafe .web a {
-    color: #666666;
+    color: #666;
     font-size: 110%;
 }
 .more-info {
